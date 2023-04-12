@@ -1,7 +1,7 @@
 ### - Created By:- Rohit Patange
 # Jenkins CI/CD project
 ## Host-website on Docker container Through automation with Jenkins CI/CD Pipeline
-				                                                                                 
+### NOTE:- Before you do this you have to atleast basic knowledge about Docker, Ansible and Jenkins tools👍...				                                                                                 
 ### 👻👻👻 WE WILL DO THIS PROJECT IN 5 STEPS 👻👻👻			
 **👨‍💻Brif introduction of our project like whatever things we do in this project👨‍💻**
 
@@ -89,29 +89,21 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 
 
 #### 👨‍💻Login in 3rd  Docker-server (root user) 
-- install Docker
-$ FOLLOW THIS WEBSITE TO INSTALL LATEST VERSION OF DOCKER https://docs.docker.com/engine/install/ubuntu/
-$ service docker start
-$ service docker enable  
-$ service docker status  ----check docker server is now active or inactive-----
-
-- Ensure that you have to login your docker-hub account in this docker server for pullling the docker-images
+###### install Docker
+      apt install docker.io -y
+      service docker start
+      service docker enable  
+      service docker status  
 
 
+#### 👨‍💻Login in 4th Devloper server (root user) 
+###### install git for devloper like they will change the code and commit that code and push into git-hub
+      apt install git -y
 
+### 👻👻👻👻👻👻 HERE YOU DONE YOUR 1ST STEP...LETS MOVE TO 2ND STEP 👻👻👻👻👻👻
 
-/// Login in 4th Devloper server (root user) 
-- install git for devloper like they will change the code and commit that code and push into git-hub
-$ yum install git -y
-
-
-
-                  👻👻👻👻👻👻 HERE YOU DONE YOUR 1ST STEP...LETS MOVE TO 2ND STEP 👻👻👻👻👻👻
-
-
-/// Then do passwordless authentication in docker server and Ansible server for give access of docker server to our ansible server for run the commands in Docker server
-
--Go to the Docker server (root user)
+**Do passwordless authentication in docker server and Ansible server for give access of docker server to our ansible server for run the commands in Docker server**
+#### 👨‍💻Go to the Docker server (root user)
 $cd /etc/ssh    -----go to this path then open sshd_config file using vim 
 $vim sshd_config   ----give yes permission to in "password authentication" then uncomment the "permitrootlogin" & remove that "prhibit password" and type here "yes" in front of permitrootlogin and then save it
 $ cd ../..   ----come back 
@@ -151,10 +143,7 @@ your password will be sucessfully set to your server
 
 $ vim etc/ssh/sshd_config   ----give yes permission to in "password authentication" then uncomment the "permitrootlogin" & remove that "prhibit password" and type here "yes" in front of permitrootlogin and then save it
 
-
-
-
-            👻👻👻👻👻👻 HERE YOU DONE WITH YOUR 2ND STEP...LETS MOVE TO 3RD STEP 👻👻👻👻👻👻
+  👻👻👻👻👻👻 HERE YOU DONE WITH YOUR 2ND STEP...LETS MOVE TO 3RD STEP 👻👻👻👻👻👻
 
 
 
