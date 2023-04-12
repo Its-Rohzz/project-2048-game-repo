@@ -14,7 +14,7 @@
 
 ### we will use some devops tools...
 ###### -Required Things 
-1) GIt-GItHub 
+1) Git-GitHub 
 2) Jenkins
 3) AWS Cloud (Ec2-instances)
 4) Docker & Docker-hub account
