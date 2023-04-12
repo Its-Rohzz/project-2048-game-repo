@@ -70,7 +70,7 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
          connection: ssh
          become: yes
          tasks: 
-              - name: stop container 
+            - name: stop container 
 	        shell: docker container kill container-1
 	      - name: remove container
 	        shell: docker rm container-1
@@ -168,11 +168,9 @@ your password will be sucessfully set to your server
  
 #### 👨‍💻After you login on your jenkins dashboard then follow this steps
 
--💻Download the plugins of **publish-over-ssh** for access your other servers from jenkins dashboard for that follow the path  click on **( manage-jenkins>>> manage-plugins>>> available-plugin )** then search **publish-over-ssh** plugin and download them 
+- 💻Download the plugins of **publish-over-ssh** for access your other servers from jenkins dashboard for that follow the path  click on **( manage-jenkins>>> manage-plugins>>> available-plugin )** then search **publish-over-ssh** plugin and download them 
 
--💻Then add your servers in your jenkins, for your jenkins can be access and manipulate your server so 
-for that follow this steps **( manage-jenkins>>> configure-system )** then scroll down at last point here you find one option 
-that is **( ssh-servers )** then click on add buttton then in **Name** option type **jenkins** and in **( host-name )** option type your **jenkin-server private-ip** then in **( username )** option type **root** ( cause we provide root access to our jenkins of our jenkins-server for perform the task on-behalf your servers ) then clcik on **( advanced )** option then select box of **use password authentication** here in **( password )** option type your **jenkins-server password** whatever you provide password for your root-user then scroll down and click on **test configuration** for test your jenkins can access or not to your server...
+- 💻Then add your servers in your jenkins, for your jenkins can be access and manipulate your server so for that follow this steps **( manage-jenkins>>> configure-system )** then scroll down at last point here you find one option that is **( ssh-servers )** then click on add buttton then in **Name** option type **jenkins** and in **( host-name )** option type your **jenkin-server private-ip** then in **( username )** option type **root** ( cause we provide root access to our jenkins of our jenkins-server for perform the task on-behalf your servers ) then clcik on **( advanced )** option then select box of **use password authentication** here in **( password )** option type your **jenkins-server password** whatever you provide password for your root-user then scroll down and click on **test configuration** for test your jenkins can access or not to your server...
 
 - 💻After that click again on **Add**option and add your ansible server also following our earlier instruction and then click on apply and save it...
 
