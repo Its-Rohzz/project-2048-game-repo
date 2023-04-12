@@ -63,7 +63,7 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 ###### 💻Ensure that you have to login your docker-hub account in this ansible server for pushing the docker-images
       docker login
 
-**After that create ansible playbook and run this playbook for your docker servers in this playbook we have to mention some docker commands for run the container from our created docker-images and delete remaining containers and images...
+**After that create ansible playbook and run this playbook for your docker servers in this playbook we have to mention some docker commands for run the container from our created docker-images and delete remaining containers and images...**
 
 ###### 💻create "project-1.yml" file on "/home/ubuntu/" this path and write this script in your file and in this script you have to provide your docker-hub-id 👇👇👇
 
