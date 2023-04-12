@@ -100,6 +100,7 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 ###### install git for devloper like they will change the code and commit that code and push into git-hub
       apt install git -y
 
+
 ### 👻👻👻👻 HERE YOU DONE YOUR 1ST STEP...LETS MOVE TO 2ND STEP 👻👻👻👻
 
 **Do passwordless authentication in docker server and Ansible server for give access of docker server to our ansible server for run the commands in Docker server**
@@ -122,7 +123,7 @@ your password will be sucessfully set to your server
 
 
 
-### Do the same process with jenkins server and ansible server
+### 👍Do the same process with jenkins server and ansible server
 #### 👨‍💻go to ansible server (root server)
 ###### 💻go to this path then open sshd_config file using vim and give yes permission to in "password authentication" then uncomment the "permitrootlogin" & remove that "prhibit password" and type here "yes" in front of permitrootlogin and then save it
       vim /etc/ssh/sshd_config  
@@ -138,29 +139,26 @@ your password will be sucessfully set to your server
 #### 👨‍💻Go to jenkins server (root user)
 ###### 💻Create one public-key     
        ssh-keygen    
-###### 💻Copy the key of docker-server into your ansible server       
-       ssh-copy-id root@<private-ip of docker-server>
+###### 💻Copy the key of ansible-server into your jenkins server       
+       ssh-copy-id root@<private-ip of ansible-server>
 
--Also set the password for jenkins server root user
-$ passwd root   -----set password to root user
+###### 💻Also set the password for jenkins server root user
+       passwd root   
 type new password then re-type new password then hit enter
 your password will be sucessfully set to your server 
 
-$ vim etc/ssh/sshd_config   ----give yes permission to in "password authentication" then uncomment the "permitrootlogin" & remove that "prhibit password" and type here "yes" in front of permitrootlogin and then save it
-
-  👻👻👻👻👻👻 HERE YOU DONE WITH YOUR 2ND STEP...LETS MOVE TO 3RD STEP 👻👻👻👻👻👻
-
+###### 💻go to this path then open sshd_config file using vim and give yes permission to in "password authentication" then uncomment the "permitrootlogin" & remove that "prhibit password" and type here "yes" in front of permitrootlogin and then save it
+       vim /etc/ssh/sshd_config
 
 
+### 👻👻👻👻 HERE YOU DONE WITH YOUR 2ND STEP...LETS MOVE TO 3RD STEP 👻👻👻👻
 
-/// Login in your git-hub account and create one public repository 
+#### 👨‍💻Login in your git-hub account and create one public repository 
+**In your git-hub account we need to integrate our jenkins with our git-hub repo for if our devloper will be commit any changes in our git-hub soo our jenkins will be automatically triggered to run our jenkins created pipeline so for doing that follow this stepes 👇👇👇👇👇👇**
 
+- go to your git-hub account and go to your source-code repo in source-code repo go to **settings** then click on **webhooks** then click on add webhook then in **payload url** type your **jenkins url** (jenkins url means type your http://<your-jenkin-server-public-ip>:8080/github-webhook/ ) ...then in **content type** option select *application json* option...
 
-/// In your git-hub account we need to integrate our jenkins with our git-hub repo for if our devloper will be commit any changes in our git-hub soo our jenkins will be automatically triggered to run our jenkins created pipeline so for doing that follow this stepes 👇👇👇👇👇👇
-
-- go to your git-hub account and go to your source folder in source folder settings then click on webhooks then click on add webhook then in "payload url" type your 'jenkins url' (jenkins url means type your 'http://<your-jenkin-server-public-ip>:8080/github-webhook/') ...then in "content type" option select 'application json' option 
-
-- then in "secret" option you have to provide your jenkins secret token so for that go to your jenkins dashboard and then click on your leftside profile-icon option then clcik "configure" option then find "API Token" option then click on 'add token' after that generate the token then copy that token and then click apply button and save it and paste your copied token in github-webhook "secreat" option and then finally click on 'addwebhook' option...
+- then in **secret** option you have to provide your jenkins secret token so for that go to your jenkins dashboard and then click on your leftside profile-icon option then click on **configure** option then find **API Token** option then click on *add token* after that generate the token then copy that token and then click apply button and save it and paste your copied token in github-webhook **secreat** option and then finally click on *addwebhook* option...
 
 
           👻👻👻👻👻👻 HERE YOU DONE WITH YOUR 3RD STEP...LETS MOVE TO 4TH STEP 👻👻👻👻👻👻
