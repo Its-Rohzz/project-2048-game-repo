@@ -30,7 +30,7 @@
 3) Ansible Server
 4) Docker server (This is node for ansible server )
 
-### 👻👻👻👻👻👻 HERE YOUR 1ST STEP IS STARTED...GIVE YOUR BEST BUDDY 👻👻👻👻👻👻
+### 👻👻👻👻 HERE YOUR 1ST STEP IS STARTED...GIVE YOUR BEST BUDDY 👻👻👻👻
 
 
 #### 👨‍💻Login in 1st server Jenkins (root user) 
@@ -100,45 +100,46 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 ###### install git for devloper like they will change the code and commit that code and push into git-hub
       apt install git -y
 
-### 👻👻👻👻👻👻 HERE YOU DONE YOUR 1ST STEP...LETS MOVE TO 2ND STEP 👻👻👻👻👻👻
+### 👻👻👻👻 HERE YOU DONE YOUR 1ST STEP...LETS MOVE TO 2ND STEP 👻👻👻👻
 
 **Do passwordless authentication in docker server and Ansible server for give access of docker server to our ansible server for run the commands in Docker server**
 #### 👨‍💻Go to the Docker server (root user)
 ###### 💻go to this path then open sshd_config file using vim and give yes permission to in "password authentication" then uncomment the "permitrootlogin" & remove that "prhibit password" and type here "yes" in front of permitrootlogin and then save it
-
-       vim /etc/ssh/sshd_config  
+      vim /etc/ssh/sshd_config  
 ###### 💻restart sshd service  
-
       service sshd restart 
-      
-      
-$ passwd root   -----set password to root user
-type new password then re-type new password then hit enter
+###### 💻set password to root user      
+      passwd root
+Type new password then re-type new password then hit enter
+your password will be sucessfully set to your server 
+
+#### 👨‍💻Go to Ansible server (root user)
+###### 💻Create one public-key     
+       ssh-keygen    
+###### 💻Copy the key of docker-server into your ansible server       
+       ssh-copy-id root@<private-ip of docker-server>  
+
+
+
+
+### Do the same process with jenkins server and ansible server
+#### 👨‍💻go to ansible server (root server)
+###### 💻go to this path then open sshd_config file using vim and give yes permission to in "password authentication" then uncomment the "permitrootlogin" & remove that "prhibit password" and type here "yes" in front of permitrootlogin and then save it
+      vim /etc/ssh/sshd_config  
+###### 💻restart sshd service  
+      service sshd restart 
+###### 💻set password to root user      
+      passwd root
+Type new password then re-type new password then hit enter
 your password will be sucessfully set to your server 
 
 
-- go to the Ansible server (root user)
-$ ssh-keygen   ----create one public-key 
-$ ssh-copy-id <hostname>@<private-ip of webserver>  -----copy the key of web-server into your ansible server
 
-
-
-
-/// Do the same process with jenkins server and ansible server
-- go to ansible server (root server)
-$cd /etc/ssh    -----go to this path then open sshd_config file using vim 
-$vim sshd_config   ----give yes permission to in "password authentication" then uncomment the "permitrootlogin" & remove that "prhibit password" and type here "yes" in front of permitrootlogin and then save it
-$ cd ../..   ----come back 
-$ systemctl sshd restart   -----restart sshd service
-$ passwd root   -----set password to root user
-type new password then re-type new password then hit enter
-your password will be sucessfully set to your server 
-
-
-
-- go to the jenkins server (root user)
-$ ssh-keygen   ----create one public-key 
-$ ssh-copy-id <hostname>@<private-ip of ansible server>  -----copy the key of web-server into your ansible server
+#### 👨‍💻Go to jenkins server (root user)
+###### 💻Create one public-key     
+       ssh-keygen    
+###### 💻Copy the key of docker-server into your ansible server       
+       ssh-copy-id root@<private-ip of docker-server>
 
 -Also set the password for jenkins server root user
 $ passwd root   -----set password to root user
