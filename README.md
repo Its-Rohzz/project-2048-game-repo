@@ -70,15 +70,15 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
          connection: ssh
          become: yes
          tasks: 
-                     - name: stop container 
-	                    shell: docker container kill container-1
-	                  - name: remove container
-	                    shell: docker rm container-1
-	                  - name: remove docker image
-	                    shell: docker rmi <type-docker-hub-user-id>/cicd-project-1
-	                  - name: create docker-container
-	                    shell: docker run -td --name container-1 -p 80:80 <type-docker-hub-user-id>/cicd-project-1
-           
+              - name: stop container 
+	        shell: docker container kill container-1
+	      - name: remove container
+	        shell: docker rm container-1
+	      - name: remove docker image
+	        shell: docker rmi <type-docker-hub-user-id>/cicd-project-1
+	      - name: create docker-container
+	        shell: docker run -td --name container-1 -p 80:80 <type-docker-hub-user-id>/cicd-project-1
+Arrange properly of playbook yml code👆👆👆...that is very important to set the correct yml file, if that is not set correctly then they will show error            
 	  
 	   
 ###### 💻Then create " Dockerfile " file on " /home/ubuntu/ " this path for crating container... write this script in your file and save it👇👇👇
