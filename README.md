@@ -24,7 +24,7 @@
 
 #### First we need 4 servers (ec2-instances) 
 
-### Launch 4 instances with t2.medium instance-types and create security group with "alltcp protocol with anywhere and ssh also"
+### Launch 4 instances with t2.medium instance-types and create security group with "alltcp protocol with anywhere and ssh also" [USE UBUNTU(free tier) 2ND IMAGE IN AWS-CLOUD CAUSE IN LATEST VERSION YOU FACE SOME ISSUE WITH DOCKERFILE] 
 1) Devloper Server
 2) Jenkins server
 3) Ansible Server
@@ -33,9 +33,9 @@
 ### 👻👻👻👻👻👻 HERE YOUR 1ST STEP IS STARTED...GIVE YOUR BEST BUDDY 👻👻👻👻👻👻
 
 
-#### ▫️◻️login in 1st server Jenkins (root user) [USE UBUNTU(free tier) 2ND IMAGE IN AWS-CLOUD CAUSE IN LATEST VERSION YOU FACE SOME ISSUE WITH DOCKERFILE] 
+#### login in 1st server Jenkins (root user) 
 
-###### install java that is required to run your jenkins cause jenkins is written in java language and its supports 11 version of java only
+###### ‣⁍⁌•install java that is required to run your jenkins cause jenkins is written in java language and its supports 11 version of java only
          apt install openjdk-11-jre
 
 ###### install Jenkins from there official website and follow the commands for install jenkins for linux...
