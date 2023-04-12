@@ -3,7 +3,7 @@
 ## Host-website on Docker container Through automation with Jenkins CI/CD Pipeline
 				                                                                                 
 ### 👻👻👻 WE WILL DO THIS PROJECT IN 5 STEPS 👻👻👻			
-**Brif introduction of our project like whatever things we do in this project**
+**👨‍💻Brif introduction of our project like whatever things we do in this project👨‍💻**
 
 - Lets see we have one devloper and they write some code of game and we want to set-up that game on docker-containers with full automation, so for that we create one CI/CD pipeline ...
 - here devloper commit the changes on git-hub...
@@ -33,7 +33,7 @@
 ### 👻👻👻👻👻👻 HERE YOUR 1ST STEP IS STARTED...GIVE YOUR BEST BUDDY 👻👻👻👻👻👻
 
 
-#### login in 1st server Jenkins (root user) [USE UBUNTU(free tier) 2ND IMAGE IN AWS-CLOUD CAUSE IN LATEST VERSION YOU FACE SOME ISSUE WITH DOCKERFILE] 
+#### ▫️◻️login in 1st server Jenkins (root user) [USE UBUNTU(free tier) 2ND IMAGE IN AWS-CLOUD CAUSE IN LATEST VERSION YOU FACE SOME ISSUE WITH DOCKERFILE] 
 
 ###### install java that is required to run your jenkins cause jenkins is written in java language and its supports 11 version of java only
          apt install openjdk-11-jre
