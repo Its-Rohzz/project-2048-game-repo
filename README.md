@@ -205,12 +205,13 @@ your password will be sucessfully set to your server
 
 - Then in your cicd-project-1 job click on **Build Now** and wait for complete your job 
 ** Here on that build job point you will see your job was not sucessfully run...and there reason is your ansible-playbook project-1.yml file beacuse in your project-1.yml file you write some docker-container remove & docker-image remove commands and that command not can run sucessfully and behind that reason is in your docker server no any containers and images is available with that names okk...so thats why your jenkins job was not sucessfully run. soo solve this problem you have to remove some commands in project-1.yml file only for first jenkins-job build time after your jenkins-job will be build sucessfully so you can add that commands again it means after that every-time your jenkins-job work properly cause in your docker server have already running containers and images and that creates beacuse of your first jenkins-job running time they create one image and container in your docker server.....soo which commands you have to remove for first jenkins-job running so that i mention below you have to remove this 👇👇commands in your project-1.yml file  
-	         - name: stop container 
-	           shell: docker container kill container-1
-	         - name: remove container
-	           shell: docker rm container-1
-	         - name: remove docker image
-	           shell: docker rmi <type-docker-hub-user-id>/cicd-project-1
+	                    
+	            - name: stop container 
+	              shell: docker container kill container-1
+	            - name: remove container
+	              shell: docker rm container-1
+	            - name: remove docker image
+	              shell: docker rmi <type-docker-hub-user-id>/cicd-project-1
 
 ### 👻👻👻👻 HERE YOU DONE WITH YOUR LAST 5TH STEP BUDDY... 👻👻👻👻
 					 
