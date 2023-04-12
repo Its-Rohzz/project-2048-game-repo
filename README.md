@@ -66,8 +66,7 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 **After that create ansible playbook and run this playbook for your docker servers in this playbook we have to mention some docker commands for run the container from our created docker-images and delete remaining containers and images...**
 
 ###### 💻Create "project-1.yml" file on "/home/ubuntu/" this path and write this script in your file and in this script you have to provide your docker-hub-id 👇👇👇
-
-       
+   
       - hosts: all
         connection: ssh
         become: yes
@@ -76,7 +75,7 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 	     shell: docker container kill container-1
 	   - name: remove container
 	     shell: docker rm container-1
-           - name: remove docker image
+	   - name: remove docker image
 	     shell: docker rmi <type-docker-hub-user-id>/cicd-project-1
 	   - name: create docker-container
 	     shell: docker run -td --name container-1 -p 80:80 <type-docker-hub-user-id>/cicd-project-1  
@@ -89,12 +88,7 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
             EXPOSE 80
 
 
-  
-
-
-
-
-/// Login in 3rd  Docker-server (root user) 
+#### Login in 3rd  Docker-server (root user) 
 - install Docker
 $ FOLLOW THIS WEBSITE TO INSTALL LATEST VERSION OF DOCKER https://docs.docker.com/engine/install/ubuntu/
 $ service docker start
