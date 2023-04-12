@@ -1,6 +1,6 @@
 ### - Created By:- Rohit Patange
 # Jenkins CI/CD project
-## Host-website on Docker container Through automation with Jenkins CI/CD Pipeline
+## Host-website on Docker container using Git-hub repo source-code with automation of Jenkins CI/CD Pipeline
 ### NOTE:- Before you do this project you have to atleast basic knowledge about Docker, Ansible and Jenkins tools for better understanding of this project👍...				                                                                                 
 ### 👻👻👻 WE WILL DO THIS PROJECT IN 5 STEPS 👻👻👻			
 **👨‍💻Brif introduction of our project like whatever things we do in this project👨‍💻**
