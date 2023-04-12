@@ -2,11 +2,8 @@
 # Jenkins CI/CD project
 ## Host-website on Docker container Through automation with Jenkins CI/CD Pipeline
 				                                                                                 
-																								                                                                                                       
-				   
-                              👻👻👻 WE WILL DO THIS PROJECT IN 5 STEPS 👻👻👻
-
-//// Brif introduction of our project like whatever things we do in this project
+### 👻👻👻 WE WILL DO THIS PROJECT IN 5 STEPS 👻👻👻			
+**Brif introduction of our project like whatever things we do in this project**
 
 - Lets see we have one devloper and they write some code of game and we want to set-up that game on docker-containers with full automation, so for that we create one CI/CD pipeline ...
 
