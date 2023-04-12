@@ -177,52 +177,49 @@ that is **( ssh-servers )** then click on add buttton then in **Name** option ty
 - 💻After that click again on "Add" option and add your ansible server also following our earlier instruction and then click on apply and save it...
 
 
-### 👻👻👻👻 HERE YOU DONE WITH ADDING JENKIN & ANSIBLE SERVER IN YOUR JENKINS SSH-SERVERS DASHBOARD 👻👻👻👻
+### 🥇🥇 HERE YOU DONE WITH ADDING JENKIN & ANSIBLE SERVER IN YOUR JENKINS SSH-SERVERS DASHBOARD 🥇🥇
 	  
 	     
 ### 👻👻👻👻 HERE YOU DONE WITH YOUR 4TH STEP...LETS MOVE TO 5TH STEP 👻👻👻👻
 
+#### Now open jenkins dashboard
 
+- Here in jenkins dashboard you have to click on **new item** (that is the pipeline) provide **( cicd-project-1 )** name then select **freestyle project** and click on OK
 
-//// After that open jenkins dashboard
+- Then in your **cicd-project-1** job you have to scroll down and find **( Source Code Management )** option and select **git** then provide git-hub URL ( you have to provide that git-hub url whatever devloper are push there source code in it ) 
 
-- Here in jenkins dashboard you have to click on "new item"(that is the pipeline) provide "cicd-project-1" name then select "freestyle project" and click on "okk"
+- In **( Build Triggers )** option choose **( GitHub hook trigger for GITScm polling )** for jenkins can automatically triggerd and then build the job as per our set-up
 
-- Then in your "cicd-project-1" job you have to scroll down and find "Source Code Management" option and select "git" then provide git-hub URL (you have to provide that git-hub url whatever devloper are push there source code in it) 
+- In **( Build steps )** option select **send file or execute commands over ssh**  Then provide jenkins server name whatever you add in ssh-servers so that you have to provide in **Name** option (ensure that you have to mention first jenkins server name cause we have to sync that jenkins data to our ansible so for that you have to mention first jenkins server) after that in **( exec command )** option mention this command 👇👇👇
+            rsync -avh /var/lib/jenkins/workspace/cicd-project-1/* root@<ansible-server private-ip>:/home/ubuntu/docker/
 
-- In "Build Triggers" option choose 'GitHub hook trigger for GITScm polling' for jenkins can automatically triggerd and then build the job as per our set-up
+- Then in **( Post-Build Actions )** click on **add post build actions** then select **send build artifacts over ssh** then in **Name option** type your ansible-server name whatever you add name in jenkins-ssh-servers after that in **exec commands** option copy this commands 👇👇👇 (we run this commands for build the image from Dockerfile and set the tags to our image for push them to docker-hub then push that image on docker-hub and then remove the remaining docker images from ansible server then the last command is run for the run our ansible-playbook then this ansible playbook create container on your docker server)
 
-- In "Build steps" option select 'send file or execute commands over ssh'  Then provide jenkins server name whatever you add in ssh-servers so that you have to provide in "name" option (ensure that you have to mention first jenkins server name cause we have to sync that jenkins data to our ansible so for that you have to mention first jenkins server) after that in "exec command" option mention this command 👇👇👇
-        $ rsync -avh /var/lib/jenkins/workspace/cicd-project-1/* root@<ansible-server private-ip>:/docker/
-
-- Then in "Post-Build Actions" click on 'add post build actions' then select 'send build artifacts over ssh' then in "name option" type your ansible-server name whatever you add name in jenkins-ssh-servers after that in "exec commands" option copy this commands 👇👇👇 
-(we run this commands for build the image from Dockerfile and set the tags to our image for push them to docker-hub then push that image on docker-hub and then remove the remaining docker images from ansible server then the last command is run for the run our ansible-playbook then this ansible playbook create container on your docker server)
-
-    docker build -t $JOB_NAME:V1.$BUILD_ID /home/ubuntu/
-    docker image tag $JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:V1.$BUILD_ID
-    docker image tag $JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:latest 
-    docker image push rohzz024/$JOB_NAME:V1.$BUILD_ID
-    docker image push rohzz024/$JOB_NAME:latest
-    docker rmi $JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:latest
-    ansible-playbook /home/ubuntu/project-1.yml
+          docker build -t $JOB_NAME:V1.$BUILD_ID /home/ubuntu/
+          docker image tag $JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:V1.$BUILD_ID
+          docker image tag $JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:latest 
+          docker image push rohzz024/$JOB_NAME:V1.$BUILD_ID
+          docker image push rohzz024/$JOB_NAME:latest
+          docker rmi $JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:latest
+          ansible-playbook /home/ubuntu/project-1.yml
 
 - After that click on "Apply" then "Save"
 
 - Then in your cicd-project-1 job click on "Build Now" and wait for complete your job 
 
 
-                     👻👻👻👻👻👻 HERE YOU DONE WITH YOUR LAST 5TH STEP BUDDY... 👻👻👻👻👻👻
+### 👻👻👻👻 HERE YOU DONE WITH YOUR LAST 5TH STEP BUDDY... 👻👻👻👻
 					 
 					 
 - Finally your job was completed sucessfully then copy your docker-server public-ip and search them on browser you will see your game and you can play 👻👻👻
 
--Here if you want to change anything in your source-code then access your devloper server and clone that code in your any local-repo then change anything in index.html file as per your knowledge and commit them then push them on that git-hub repo  after that your jenkins-job automatically get triggerd and you can see your game with whatever you are change in source-code that changes can reflect in your game dashboard 🤩🤩🤩🤩 
+- Here if you want to change anything in your source-code then access your devloper server and clone that code in your any local-repo then change anything in index.html file as per your knowledge and commit them then push them on that git-hub repo  after that your jenkins-job automatically get triggerd and you can see your game with whatever you are change in source-code that changes can reflect in your game dashboard 🤩🤩🤩🤩 
 
-NOTE:- IF YOU'RE FACING ANY ISSUE THEM RESEARCH ON IT AND TRY TO SOLVE THAT ISSUE OR ERRORS...GOOD LUCK👍
+### NOTE:- IF YOU'RE FACING ANY ISSUE THEM RESEARCH ON IT AND TRY TO SOLVE THAT ISSUE OR ERRORS...GOOD LUCK👍
 
-                   👻👻👻👻 DUDE FINALLY YOU DID THIS PROJECT🥇🥇🥇 AM HAPPY FOR YOU... 👻👻👻👻
-					  
-					                    👻👻👻👻 THANK YOU 👻👻👻👻
+### 👻👻👻👻 DUDE FINALLY YOU DID THIS PROJECT🥇🥇🥇 AM HAPPY FOR YOU... 👻👻👻👻
+					
+# 🎗️🎗️ THANK YOU 🎗️🎗️
   
   
   
