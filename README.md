@@ -22,26 +22,24 @@
 6) Ansible
 
 
-/// First we need 4 server(instances) 
+#### First we need 4 servers (ec2-instances) 
 
-// Launch 4 instances with t2.medium instance-types and create security group with "alltcp protocol with anywhere and ssh also"
-
+### Launch 4 instances with t2.medium instance-types and create security group with "alltcp protocol with anywhere and ssh also"
 1) Devloper Server
 2) Jenkins server
 3) Ansible Server
 4) Docker server (This is node for ansible server )
 
+### 👻👻👻👻👻👻 HERE YOUR 1ST STEP IS STARTED...GIVE YOUR BEST BUDDY 👻👻👻👻👻👻
 
-                  👻👻👻👻👻👻 HERE YOUR 1ST STEP IS STARTED...GIVE YOUR BEST BUDDY 👻👻👻👻👻👻
 
+#### login in 1st server Jenkins (root user) [USE UBUNTU(free tier) 2ND IMAGE IN AWS-CLOUD CAUSE IN LATEST VERSION YOU FACE SOME ISSUE WITH DOCKERFILE] 
 
-/// login in 1st server Jenkins (root user) [USE UBUNTU(free tier) 2ND IMAGE IN AWS-CLOUD] i don't no what is that version thats why am saying like that...
+###### install java that is required to run your jenkins cause jenkins is written in java language and its supports 11 version of java only
+         apt install openjdk-11-jre
 
--install java that is required to run your jenkins cause jenkins is written in java language and its 11 version of java only
-$ apt install openjdk-11-jre
-
--install Jenkins from there official website and follow the commands for installing jenkins for linux
-   👉👉👉         https://pkg.jenkins.io/debian-stable/
+###### install Jenkins from there official website and follow the commands for install jenkins for linux...
+__👉👉👉      https://pkg.jenkins.io/debian-stable/__
 
 -install also git for jenkins can pull your image from git-hub
 $ yum install git -y
