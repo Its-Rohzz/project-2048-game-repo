@@ -46,18 +46,19 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 
 
 #### Login in 2nd Ansible server (root user) 
-###### 💻install Ansible
+###### 💻install Ansible  (after install if ansible is inactive then activate it using start command instead of status)
       yum update -y
-###### yum install ansible (after install if ansible is inactive then activate it using start command instead of status)
+      yum install ansible 
       service ansible status   
 
 ###### 💻Then go to ansible host path and create one group " [ansible-nodes] " then add your docker-server private-IP in that group
       vim etc/ansible/hosts
-__#green.example.com __
+__👇👇👇write your docker server private-ip in hosts file after this lines__
+green.example.com
 #blue.example.com
 #192.168.100.1
-#192.168.100.1                                                                
-	------ write your docker server private-ip in hosts file after this lines👆👆👆	   
+#192.168.100.1                                                              
+	   
 
 
 
