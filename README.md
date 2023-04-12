@@ -67,18 +67,18 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 
 ###### 💻Create "project-1.yml" file on "/home/ubuntu/" this path and write this script in your file and in this script you have to provide your docker-hub-id 👇👇👇
    
-      - hosts: all
-        connection: ssh
-        become: yes
-        tasks: 
-	   - name: stop container 
-	     shell: docker container kill container-1
-	   - name: remove container
-	     shell: docker rm container-1
-	   - name: remove docker image
-	     shell: docker rmi <type-docker-hub-user-id>/cicd-project-1
-	   - name: create docker-container
-	     shell: docker run -td --name container-1 -p 80:80 <type-docker-hub-user-id>/cicd-project-1  
+         - hosts: all
+           connection: ssh
+           become: yes
+           tasks: 
+	      - name: stop container 
+	        shell: docker container kill container-1
+	      - name: remove container
+	        shell: docker rm container-1
+	      - name: remove docker image
+	        shell: docker rmi <type-docker-hub-user-id>/cicd-project-1
+	      - name: create docker-container
+	        shell: docker run -td --name container-1 -p 80:80 <type-docker-hub-user-id>/cicd-project-1  
 	  
 	   
 ###### 💻Then create file on " /home/ubuntu/ " this path of this name " Dockerfile " for crating container... write this script in your file and save it👇👇👇
@@ -219,7 +219,7 @@ that is **( ssh-servers )** then click on add buttton then in **Name** option ty
 
 ### 👻👻👻👻 DUDE FINALLY YOU DID THIS PROJECT🥇🥇🥇 AM HAPPY FOR YOU... 👻👻👻👻
 					
-# 🎗️🎗️ THANK YOU 🎗️🎗️
+#                                          🎗️🎗️ THANK YOU 🎗️🎗️
   
   
   
