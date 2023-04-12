@@ -33,7 +33,7 @@
 ### 👻👻👻👻👻👻 HERE YOUR 1ST STEP IS STARTED...GIVE YOUR BEST BUDDY 👻👻👻👻👻👻
 
 
-#### login in 1st server Jenkins (root user) 
+#### Login in 1st server Jenkins (root user) 
 
 ###### 💻install java that is required to run your jenkins cause jenkins is written in java language and its supports 11 version of java only
       apt install openjdk-11-jre -y
@@ -46,33 +46,26 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 
 
 #### Login in 2nd Ansible server (root user) 
-###### 💻install Ansible  (after install if ansible is inactive then activate it using start command instead of status)
+###### 💻Install Ansible  (after install if ansible is inactive then activate it using start command instead of status)
       yum update -y
-      yum install ansible 
+      yum install ansible -y
       service ansible status   
 
 ###### 💻Then go to ansible host path and create one group " [ansible-nodes] " then add your docker-server private-IP in that group
-      vim etc/ansible/hosts
-__👇👇👇write your docker server private-ip in hosts file after this lines__
-green.example.com
-#blue.example.com
-#192.168.100.1
-#192.168.100.1                                                              
+      vim etc/ansible/hosts                                                            
 	   
+###### 💻Install docker also for create docker-image from our Dockerfile
+      apt install docker.io -y
+      service docker start
+      service docker enable  
+      service docker status    
 
+###### 💻Ensure that you have to login your docker-hub account in this ansible server for pushing the docker-images
+      docker login
 
+**After that create ansible playbook and run this playbook for your docker servers in this playbook we have to mention some docker commands for run the container from our created docker-images and delete remaining containers and images...
 
-- install docker also for create docker-image from our Dockerfile
-$ FOLLOW THIS WEBSITE TO INSTALL LATEST VERSION OF DOCKER https://docs.docker.com/engine/install/ubuntu/
-$ service docker start
-$ service docker enable  
-$ service docker status    ----check docker server is now active or inactive-----
-
-- Ensure that you have to login your docker-hub account in this ansible server for pushing the docker-images
-
-- After that create ansible playbook and run this playbook for your docker servers in this playbook we have to mention some docker commands for run the container from our created docker-images and delete remaining containers and images...
-
-- create "project-1.yml" file on "/home/ubuntu/" this path and write this script in your file and in this script you have to provide your docker-hub-id 👇👇👇
+###### 💻create "project-1.yml" file on "/home/ubuntu/" this path and write this script in your file and in this script you have to provide your docker-hub-id 👇👇👇
 
        
 	     - hosts: all
