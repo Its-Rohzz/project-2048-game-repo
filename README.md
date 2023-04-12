@@ -156,17 +156,17 @@ your password will be sucessfully set to your server
 #### 👨‍💻Login in your git-hub account and create one public repository 
 **In your git-hub account we need to integrate our jenkins with our git-hub repo for if our devloper will be commit any changes in our git-hub soo our jenkins will be automatically triggered to run our jenkins created pipeline so for doing that follow this stepes 👇👇👇👇👇👇**
 
-- go to your git-hub account and go to your source-code repo in source-code repo go to **settings** then click on **webhooks** then click on add webhook then in **payload url** type your **jenkins url** (jenkins url means type your http://<your-jenkin-server-public-ip>:8080/github-webhook/ ) ...then in **content type** option select __application json__ option...
+- go to your git-hub account and go to your source-code repo in source-code repo go to **( settings )** then click on **( webhooks )** then click on add webhook then in **payload url** type your **( jenkins url )** ( jenkins url means type your http://<your-jenkin-server-public-ip>:8080/github-webhook/ ) ...then in **( content type )** option select **application json** option...
 
-- then in **secret** option you have to provide your jenkins secret token so for that go to your jenkins dashboard and then click on your leftside profile-icon option then click on **configure** option then find **API Token** option then click on *add token* after that generate the token then copy that token and then click apply button and save it and paste your copied token in github-webhook **secreat** option and then finally click on *addwebhook* option...
+- then in **( secret )** option you have to provide your jenkins secret token so for that go to your jenkins dashboard and then click on your leftside profile-icon option then click on **( configure )** option then find **( API Token )** option then click on *add token* after that generate the token then copy that token and then click apply button and save it and paste your copied token in github-webhook **(secreat )** option and then finally click on **addwebhook** option...
 
 
-          👻👻👻👻👻👻 HERE YOU DONE WITH YOUR 3RD STEP...LETS MOVE TO 4TH STEP 👻👻👻👻👻👻
+### 👻👻👻👻 HERE YOU DONE WITH YOUR 3RD STEP...LETS MOVE TO 4TH STEP 👻👻👻👻
  
  
-          👻👻👻👻👻👻 FROM HERE YOUR CI/CD PIPELINE WORK IS STARTED...BEST OF LUCK 👻👻👻👻👻👻
+### 👉👉👻👻 FROM HERE YOUR CI/CD PIPELINE WORK IS STARTED...BEST OF LUCK 👻👻👈👈
  
- /// After you login on your jenkins dashboard then follow this steps
+#### 👨‍💻After you login on your jenkins dashboard then follow this steps
 
 
 - download plugins for "publish-over-ssh" so for access your other servers from jenkins dashboard for that follow the path  "manage-jenkins>>> manage-plugins>>>" available-plugin then search "publish-over-ssh" plugin and download them 
