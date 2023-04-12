@@ -24,7 +24,7 @@
 
 #### First we need 4 servers (ec2-instances) 
 
-### Launch 4 instances with t2.medium instance-types and create security group with "alltcp protocol with anywhere and ssh also" [USE UBUNTU(free tier) 2ND IMAGE IN AWS-CLOUD CAUSE IN LATEST VERSION YOU FACE SOME ISSUE WITH DOCKERFILE] 
+### Launch 4 instances with t2.medium instance-types and create security group with "alltcp protocol with anywhere and ssh also" [ Use ubuntu (free tier) 2nd image in AWS-Cloud...cause in ubuntu latest version you face some issue with Dockerfile ]
 1) Devloper Server
 2) Jenkins server
 3) Ansible Server
@@ -82,10 +82,7 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 	     shell: docker run -td --name container-1 -p 80:80 <type-docker-hub-user-id>/cicd-project-1  
 	  
 	   
-
-
-
-###### Then create file on **/home/ubuntu/** this path of this name **Dockerfile** for crating container... write this script in your file and save it👇👇👇
+###### Then create file on " /home/ubuntu/ " this path of this name " Dockerfile " for crating container... write this script in your file and save it👇👇👇
    
             FROM nginx:latest
             COPY ./docker/* /usr/share/nginx/html/
