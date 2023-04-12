@@ -33,7 +33,7 @@
 ### 👻👻👻👻👻👻 HERE YOUR 1ST STEP IS STARTED...GIVE YOUR BEST BUDDY 👻👻👻👻👻👻
 
 
-#### Login in 1st server Jenkins (root user) 
+#### 👨‍💻Login in 1st server Jenkins (root user) 
 
 ###### 💻install java that is required to run your jenkins cause jenkins is written in java language and its supports 11 version of java only
       apt install openjdk-11-jre -y
@@ -45,7 +45,7 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
       apt install git -y
 
 
-#### Login in 2nd Ansible server (root user) 
+#### 👨‍💻Login in 2nd Ansible server (root user) 
 ###### 💻Install Ansible  (after install if ansible is inactive then activate it using start command instead of status)
       yum update -y
       yum install ansible -y
@@ -81,14 +81,14 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 	     shell: docker run -td --name container-1 -p 80:80 <type-docker-hub-user-id>/cicd-project-1  
 	  
 	   
-###### Then create file on " /home/ubuntu/ " this path of this name " Dockerfile " for crating container... write this script in your file and save it👇👇👇
+###### 💻Then create file on " /home/ubuntu/ " this path of this name " Dockerfile " for crating container... write this script in your file and save it👇👇👇
    
             FROM nginx:latest
             COPY ./docker/* /usr/share/nginx/html/
             EXPOSE 80
 
 
-#### Login in 3rd  Docker-server (root user) 
+#### 👨‍💻Login in 3rd  Docker-server (root user) 
 - install Docker
 $ FOLLOW THIS WEBSITE TO INSTALL LATEST VERSION OF DOCKER https://docs.docker.com/engine/install/ubuntu/
 $ service docker start
