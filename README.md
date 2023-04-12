@@ -204,7 +204,13 @@ your password will be sucessfully set to your server
 - After that click on **Apply** then **Save**
 
 - Then in your cicd-project-1 job click on **Build Now** and wait for complete your job 
-
+** Here on that build job point you will see your job was not sucessfully run...and there reason is your ansible-playbook project-1.yml file beacuse in your project-1.yml file you write some docker-container remove & docker-image remove commands and that command not can run sucessfully and behind that reason is in your docker server no any containers and images is available with that names okk...so thats why your jenkins job was not sucessfully run. soo solve this problem you have to remove some commands in project-1.yml file only for first jenkins-job build time after your jenkins-job will be build sucessfully so you can add that commands again it means after that every-time your jenkins-job work properly cause in your docker server have already running containers and images and that creates beacuse of your first jenkins-job running time they create one image and container in your docker server.....soo which commands you have to remove for first jenkins-job running so that i mention below you have to remove this 👇👇commands in your project-1.yml file  
+	         - name: stop container 
+	           shell: docker container kill container-1
+	         - name: remove container
+	           shell: docker rm container-1
+	         - name: remove docker image
+	           shell: docker rmi <type-docker-hub-user-id>/cicd-project-1
 
 ### 👻👻👻👻 HERE YOU DONE WITH YOUR LAST 5TH STEP BUDDY... 👻👻👻👻
 					 
@@ -213,7 +219,7 @@ your password will be sucessfully set to your server
 
 - Here if you want to change anything in your source-code then access your devloper server and clone that code in your any local-repo then change anything in index.html file as per your knowledge and commit them then push them on that git-hub repo  after that your jenkins-job automatically get triggerd and you can see your game with whatever you are change in source-code that changes can reflect in your game dashboard 🥇🥇🥇🥇 
 
-### NOTE:- IF YOU'RE FACING ANY ISSUE THEM RESEARCH ON IT AND TRY TO SOLVE THAT ISSUE OR ERRORS...GOOD LUCK👍
+### NOTE:- IF YOU'RE FACING ANY ISSUE THEN RESEARCH ON IT AND TRY TO SOLVE THAT ISSUE OR ERRORS...GOOD LUCK👍
 
 ### 👻👻👻👻 DUDE FINALLY YOU DID THIS PROJECT🥇🥇🥇 AM HAPPY FOR YOU... 👻👻👻👻
 					
