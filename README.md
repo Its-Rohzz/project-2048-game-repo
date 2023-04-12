@@ -104,10 +104,14 @@ __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 
 **Do passwordless authentication in docker server and Ansible server for give access of docker server to our ansible server for run the commands in Docker server**
 #### 👨‍💻Go to the Docker server (root user)
-$cd /etc/ssh    -----go to this path then open sshd_config file using vim 
-$vim sshd_config   ----give yes permission to in "password authentication" then uncomment the "permitrootlogin" & remove that "prhibit password" and type here "yes" in front of permitrootlogin and then save it
-$ cd ../..   ----come back 
-$ service sshd restart   -----restart sshd service
+###### 💻go to this path then open sshd_config file using vim and give yes permission to in "password authentication" then uncomment the "permitrootlogin" & remove that "prhibit password" and type here "yes" in front of permitrootlogin and then save it
+
+       vim /etc/ssh/sshd_config  
+###### 💻restart sshd service  
+
+      service sshd restart 
+      
+      
 $ passwd root   -----set password to root user
 type new password then re-type new password then hit enter
 your password will be sucessfully set to your server 
