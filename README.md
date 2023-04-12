@@ -35,30 +35,28 @@
 
 #### login in 1st server Jenkins (root user) 
 
-###### ‣⁍⁌•install java that is required to run your jenkins cause jenkins is written in java language and its supports 11 version of java only
-         apt install openjdk-11-jre
+###### 💻install java that is required to run your jenkins cause jenkins is written in java language and its supports 11 version of java only
+      apt install openjdk-11-jre -y
 
 ###### install Jenkins from there official website and follow the commands for install jenkins for linux...
 __👉👉👉      https://pkg.jenkins.io/debian-stable/__
 
--install also git for jenkins can pull your image from git-hub
-$ yum install git -y
+###### 💻install also git for jenkins can pull your image from git-hub
+      apt install git -y
 
 
+#### Login in 2nd Ansible server (root user) 
+###### 💻install Ansible
+      yum update -y
+###### yum install ansible (after install if ansible is inactive then activate it using start command instead of status)
+      service ansible status   
 
-
-///  Login in 2nd Ansible server (root user) 
-- install Ansible
-$ yum update -y
-$ yum install ansible
-$ service ansible status   ----if ansible is inactive then activate it
-
-- Then go to ansible host path and create one group " [ansible-nodes] " then add your docker-server private-IP in that group
-$ vim etc/ansible/hosts
-                                                                #green.example.com
-                                                                #blue.example.com
-                                                                #192.168.100.1
-                                                                #192.168.100.1
+###### 💻Then go to ansible host path and create one group " [ansible-nodes] " then add your docker-server private-IP in that group
+      vim etc/ansible/hosts
+__#green.example.com __
+#blue.example.com
+#192.168.100.1
+#192.168.100.1                                                                
 	------ write your docker server private-ip in hosts file after this lines👆👆👆	   
 
 
