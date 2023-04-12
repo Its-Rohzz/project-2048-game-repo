@@ -168,13 +168,13 @@ your password will be sucessfully set to your server
  
 #### 👨‍💻After you login on your jenkins dashboard then follow this steps
 
-- 💻Download the plugins of **publish-over-ssh** for access your other servers from jenkins dashboard for that follow the path  click on **( manage-jenkins>>> manage-plugins>>> available-plugin )** then search **publish-over-ssh** plugin and download them 
+-💻Download the plugins of **publish-over-ssh** for access your other servers from jenkins dashboard for that follow the path  click on **( manage-jenkins>>> manage-plugins>>> available-plugin )** then search **publish-over-ssh** plugin and download them 
 
-- 💻Then add your servers in your jenkins, for your jenkins can be access and manipulate your server so 
+-💻Then add your servers in your jenkins, for your jenkins can be access and manipulate your server so 
 for that follow this steps **( manage-jenkins>>> configure-system )** then scroll down at last point here you find one option 
 that is **( ssh-servers )** then click on add buttton then in **Name** option type **jenkins** and in **( host-name )** option type your **jenkin-server private-ip** then in **( username )** option type **root** ( cause we provide root access to our jenkins of our jenkins-server for perform the task on-behalf your servers ) then clcik on **( advanced )** option then select box of **use password authentication** here in **( password )** option type your **jenkins-server password** whatever you provide password for your root-user then scroll down and click on **test configuration** for test your jenkins can access or not to your server...
 
-- 💻After that click again on "Add" option and add your ansible server also following our earlier instruction and then click on apply and save it...
+- 💻After that click again on **Add**option and add your ansible server also following our earlier instruction and then click on apply and save it...
 
 
 ### 🥇🥇 HERE YOU DONE WITH ADDING JENKIN & ANSIBLE SERVER IN YOUR JENKINS SSH-SERVERS DASHBOARD 🥇🥇
@@ -195,17 +195,17 @@ that is **( ssh-servers )** then click on add buttton then in **Name** option ty
 
 - Then in **( Post-Build Actions )** click on **add post build actions** then select **send build artifacts over ssh** then in **Name option** type your ansible-server name whatever you add name in jenkins-ssh-servers after that in **exec commands** option copy this commands 👇👇👇 (we run this commands for build the image from Dockerfile and set the tags to our image for push them to docker-hub then push that image on docker-hub and then remove the remaining docker images from ansible server then the last command is run for the run our ansible-playbook then this ansible playbook create container on your docker server)
 
-          docker build -t $JOB_NAME:V1.$BUILD_ID /home/ubuntu/
-          docker image tag $JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:V1.$BUILD_ID
-          docker image tag $JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:latest 
-          docker image push rohzz024/$JOB_NAME:V1.$BUILD_ID
-          docker image push rohzz024/$JOB_NAME:latest
-          docker rmi $JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:latest
-          ansible-playbook /home/ubuntu/project-1.yml
+                docker build -t $JOB_NAME:V1.$BUILD_ID /home/ubuntu/
+                docker image tag $JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:V1.$BUILD_ID
+                docker image tag $JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:latest 
+                docker image push rohzz024/$JOB_NAME:V1.$BUILD_ID
+                docker image push rohzz024/$JOB_NAME:latest
+                docker rmi $JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:V1.$BUILD_ID rohzz024/$JOB_NAME:latest
+                ansible-playbook /home/ubuntu/project-1.yml
 
-- After that click on "Apply" then "Save"
+- After that click on **Apply** then **Save**
 
-- Then in your cicd-project-1 job click on "Build Now" and wait for complete your job 
+- Then in your cicd-project-1 job click on **Build Now** and wait for complete your job 
 
 
 ### 👻👻👻👻 HERE YOU DONE WITH YOUR LAST 5TH STEP BUDDY... 👻👻👻👻
@@ -213,7 +213,7 @@ that is **( ssh-servers )** then click on add buttton then in **Name** option ty
 					 
 - Finally your job was completed sucessfully then copy your docker-server public-ip and search them on browser you will see your game and you can play 👻👻👻
 
-- Here if you want to change anything in your source-code then access your devloper server and clone that code in your any local-repo then change anything in index.html file as per your knowledge and commit them then push them on that git-hub repo  after that your jenkins-job automatically get triggerd and you can see your game with whatever you are change in source-code that changes can reflect in your game dashboard 🤩🤩🤩🤩 
+- Here if you want to change anything in your source-code then access your devloper server and clone that code in your any local-repo then change anything in index.html file as per your knowledge and commit them then push them on that git-hub repo  after that your jenkins-job automatically get triggerd and you can see your game with whatever you are change in source-code that changes can reflect in your game dashboard 🥇🥇🥇🥇 
 
 ### NOTE:- IF YOU'RE FACING ANY ISSUE THEM RESEARCH ON IT AND TRY TO SOLVE THAT ISSUE OR ERRORS...GOOD LUCK👍
 
