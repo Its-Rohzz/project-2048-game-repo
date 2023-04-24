@@ -189,7 +189,8 @@ your password will be sucessfully set to your server
 - In **( Build Triggers )** option choose **( GitHub hook trigger for GITScm polling )** for jenkins can automatically triggerd and then build the job as per our set-up
 
 - In **( Build steps )** option select **send file or execute commands over ssh**  Then provide jenkins server name whatever you add in ssh-servers so that you have to provide in **Name** option (ensure that you have to mention first jenkins server name cause we have to sync that jenkins data to our ansible so for that you have to mention first jenkins server) after that in **( exec command )** option mention this command 👇👇👇
-            rsync -avh /var/lib/jenkins/workspace/cicd-project-1/* root@<ansible-server private-ip>:/home/ubuntu/docker/
+              
+	      rsync -avh /var/lib/jenkins/workspace/cicd-project-1/* root@<ansible-server private-ip>:/home/ubuntu/docker/
 
 - Then in **( Post-Build Actions )** click on **add post build actions** then select **send build artifacts over ssh** then in **Name option** type your ansible-server name whatever you add name in jenkins-ssh-servers after that in **exec commands** option copy this commands 👇👇👇 (we run this commands for build the image from Dockerfile and set the tags to our image for push them to docker-hub then push that image on docker-hub and then remove the remaining docker images from ansible server then the last command is run for the run our ansible-playbook then this ansible playbook create container on your docker server)
 
