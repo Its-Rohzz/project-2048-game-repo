@@ -13,7 +13,7 @@
 - and also we create one playbook and in that playbook we mention command of docker container running and we write couple of commands for remove our remaining containers and images whatever is created with our CI/CD pipeline...cause whatever times your jenkins will be triggerd so they create docker-image and docker-containers so we have to delete that old containers and images so for that we write some docker-remove commands and for that we use **Jenkins variables** ...
 
 ### we will use some devops tools...
-###### -Required Things 
+###### -Required Things  
 1) Git-GitHub 
 2) Jenkins
 3) AWS Cloud (Ec2-instances)
