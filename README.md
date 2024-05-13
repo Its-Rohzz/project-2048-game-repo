@@ -5,8 +5,8 @@
 ### 👻👻👻 WE WILL DO THIS PROJECT IN 5 STEPS 👻👻👻			
 **👨‍💻Brif introduction of our project like whatever things we do in this project👨‍💻**
 
-- Lets see we have one devloper and they write some code of game and we want to set-up that game on docker-containers with full automation, so for that we create one CI/CD pipeline ...
-- here devloper commit the changes on git-hub...
+- Lets see we have one developer and they write some code of game and we want to set-up that game on docker-containers with full automation, so for that we create one CI/CD pipeline ...
+- here developer commit the changes on git-hub...
 - then jenkin trigger automatically through web-hook wit github repo then that will be pull the data and save it in workspace...after that jenkin can tranfer that data in ansible server using rsync command with passwordless autentication...
 
 - then in ansible server we can install docker and create one dockerfile for crating image and we push that image on docker-hub for the back-up purpose and with that image create one container...
@@ -25,7 +25,7 @@
 #### First we need 4 servers (ec2-instances) 
 
 ### Launch 4 instances with t2.medium instance-types and create security group with "alltcp protocol with anywhere and ssh also" [ Use ubuntu (free tier) 2nd image in AWS-Cloud...cause in ubuntu latest version you face some issue with Dockerfile ]
-1) Devloper Server
+1) Developer Server
 2) Jenkins server
 3) Ansible Server
 4) Docker server (This is node for ansible server )
