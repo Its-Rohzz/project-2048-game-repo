@@ -2,7 +2,7 @@
 # Jenkins CI/CD project
 ## Host-website on Docker container using Git-hub repo source-code with automation of Jenkins CI/CD Pipeline
 ### NOTE:- Before you do this project you have to atleast basic knowledge about Docker, Ansible and Jenkins tools for better understanding of this project👍...				                                                                                 
-### 👻👻👻 WE WILL DO THIS PROJECT IN 5 STEPS 👻👻👻			
+### 🖥️WE WILL DO THIS PROJECT IN 5 STEPS🖥️ 			
 **👨‍💻Brif introduction of our project like whatever things we do in this project👨‍💻**
 
 - Lets see we have one developer and they write some code of game and we want to set-up that game on docker-containers with full automation, so for that we create one CI/CD pipeline ...
@@ -30,7 +30,7 @@
 3) Ansible Server
 4) Docker server (This is node for ansible server )
 
-### 👻👻👻👻 HERE YOUR 1ST STEP IS STARTED...GIVE YOUR BEST BUDDY 👻👻👻👻
+### 🖥️HERE YOUR 1ST STEP IS STARTED...GIVE YOUR BEST BUDDY 🖥️
 
 
 #### 👨‍💻Login in 1st server Jenkins (root user) 
@@ -101,7 +101,7 @@ Arrange properly of playbook yml code👆👆👆...that is very important to se
       apt install git -y
 
 
-### 👻👻👻👻 HERE YOU DONE YOUR 1ST STEP...LETS MOVE TO 2ND STEP 👻👻👻👻
+### 🖥️ HERE YOU DONE YOUR 1ST STEP...LETS MOVE TO 2ND STEP 🖥️
 
 **Do passwordless authentication in docker server and Ansible server for give access of docker server to our ansible server for run the commands in Docker server**
 #### 👨‍💻Go to the Docker server (root user)
@@ -151,7 +151,7 @@ your password will be sucessfully set to your server
        vim /etc/ssh/sshd_config
 
 
-### 👻👻👻👻 HERE YOU DONE WITH YOUR 2ND STEP...LETS MOVE TO 3RD STEP 👻👻👻👻
+### 🖥️ HERE YOU DONE WITH YOUR 2ND STEP...LETS MOVE TO 3RD STEP 🖥️
 
 #### 👨‍💻Login in your git-hub account and create one public repository 
 **In your git-hub account we need to integrate our jenkins with our git-hub repo for if our devloper will be commit any changes in our git-hub soo our jenkins will be automatically triggered to run our jenkins created pipeline so for doing that follow this stepes 👇👇👇👇👇👇**
@@ -161,7 +161,7 @@ your password will be sucessfully set to your server
 - then in **( secret )** option you have to provide your jenkins secret token so for that go to your jenkins dashboard and then click on your leftside profile-icon option then click on **( configure )** option then find **( API Token )** option then click on *add token* after that generate the token then copy that token and then click apply button and save it and paste your copied token in github-webhook **(secreat )** option and then finally click on **addwebhook** option...
 
 
-### 👻👻👻👻 HERE YOU DONE WITH YOUR 3RD STEP...LETS MOVE TO 4TH STEP 👻👻👻👻
+### 🖥️ HERE YOU DONE WITH YOUR 3RD STEP...LETS MOVE TO 4TH STEP 🖥️
  
  
 ### 👉👉👻👻 FROM HERE YOUR CI/CD PIPELINE WORK IS STARTED...BEST OF LUCK 👻👻👈👈
@@ -178,7 +178,7 @@ your password will be sucessfully set to your server
 ### 🥇🥇 HERE YOU DONE WITH ADDING JENKIN & ANSIBLE SERVER IN YOUR JENKINS SSH-SERVERS DASHBOARD 🥇🥇
 	  
 	     
-### 👻👻👻👻 HERE YOU DONE WITH YOUR 4TH STEP...LETS MOVE TO 5TH STEP 👻👻👻👻
+### 🖥️ HERE YOU DONE WITH YOUR 4TH STEP...LETS MOVE TO 5TH STEP 🖥️
 
 #### Now open jenkins dashboard
 
@@ -216,16 +216,16 @@ your password will be sucessfully set to your server
 	            - name: remove docker image
 	              shell: docker rmi <type-docker-hub-user-id>/cicd-project-1
 
-### 👻👻👻👻 HERE YOU DONE WITH YOUR LAST 5TH STEP BUDDY... 👻👻👻👻
+### 🖥️ HERE YOU DONE WITH YOUR LAST 5TH STEP BUDDY... 🖥️
 					 
 					 
-- Finally your job was completed sucessfully then copy your docker-server public-ip and search them on browser you will see your game and you can play 👻👻👻
+- Finally your job was completed sucessfully then copy your docker-server public-ip and search them on browser you will see your game and you can play 🖥️
 
 - Here if you want to change anything in your source-code then access your devloper server and clone that code in your any local-repo then change anything in index.html file as per your knowledge and commit them then push them on that git-hub repo  after that your jenkins-job automatically get triggerd and you can see your game with whatever you are change in source-code that changes can reflect in your game dashboard 🥇🥇🥇🥇 
 
 ### NOTE:- IF YOU'RE FACING ANY ISSUE THEN RESEARCH ON IT AND TRY TO SOLVE THAT ISSUE OR ERRORS...GOOD LUCK👍
 
-### 👻👻👻👻 DUDE FINALLY YOU DID THIS PROJECT🥇🥇🥇 AM HAPPY FOR YOU... 👻👻👻👻
+###  DUDE FINALLY YOU DID THIS PROJECT🥇🥇🥇 AM HAPPY FOR YOU... 
 					
 #                                          🎗️🎗️ THANK YOU 🎗️🎗️
   
